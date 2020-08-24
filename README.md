@@ -1,2 +1,9 @@
-# homebrew-tap
-Allow for homebrew based installation of Fidelity authored works before they are ready for homebrew-core
+# Fidelity Tap
+
+## How do I install these formulae?
+`brew install fidelity/tap/<formula>`
+
+Or `brew tap fidelity/tap` and then `brew install <formula>`.
+
+## Documentation
+`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
