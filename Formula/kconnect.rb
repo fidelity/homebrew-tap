@@ -2,16 +2,16 @@
 class Kconnect < Formula
   desc "The Kubernetes Connection Manager CLI"
   homepage "https://github.com/fidelity/kconnect"
-  version "0.1.2"
+  version "0.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/fidelity/kconnect/releases/download/0.1.2/kconnect_macos_64-bit.tar.gz"
-    sha256 "cda4ba622106d8ed475963a509ee56a0c83483b9d72f880f2908b3220d4b48e4"
+    url "https://github.com/fidelity/kconnect/releases/download/0.2.0/kconnect_macos_64-bit.tar.gz"
+    sha256 "f2c9517dd6d4314992bb527b7d44e633f852d668b6c8cb58eaa01339c700f72f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/fidelity/kconnect/releases/download/0.1.2/kconnect_linux_64-bit.tar.gz"
-      sha256 "f27f679d88e0777bf26f81a09c011e2c9bab7901b330fc8ff7c1f99a54129106"
+      url "https://github.com/fidelity/kconnect/releases/download/0.2.0/kconnect_linux_64-bit.tar.gz"
+      sha256 "d7d2f67ba7f9269ce0fbaabb2277129ff81ace64d25b77e8f32c5715744e1207"
     end
   end
   
