@@ -7,11 +7,11 @@ class Kconnect < Formula
 
   if OS.mac?
     url "https://github.com/fidelity/kconnect/releases/download/0.2.0/kconnect_macos_64-bit.tar.gz"
-    sha256 "f2c9517dd6d4314992bb527b7d44e633f852d668b6c8cb58eaa01339c700f72f"
+    sha256 "a83ed5ff3173fe98bfcf8ae7c518eb11f6a0d6fd6a6454a7103f738e06827a0f"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/fidelity/kconnect/releases/download/0.2.0/kconnect_linux_64-bit.tar.gz"
-      sha256 "d7d2f67ba7f9269ce0fbaabb2277129ff81ace64d25b77e8f32c5715744e1207"
+      sha256 "85b926fb249721308f6e6f57fc6c575883d1a74fa5834eeab8a7863f213819f2"
     end
   end
   
