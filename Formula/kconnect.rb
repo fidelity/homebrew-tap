@@ -7,19 +7,19 @@ class Kconnect < Formula
 
   if OS.mac?
     url "https://github.com/fidelity/kconnect/releases/download/0.2.1/kconnect_macos_amd64.tar.gz"
-    sha256 "30b25c17ad9a1bddc504a87c422da6ac98c776c7334bd25d81398d4d656133b9"
+    sha256 "84319b9cb4ebe489be82842875b984965518bdf05b56898e66c9e76ecf34a47d"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/fidelity/kconnect/releases/download/0.2.1/kconnect_linux_amd64.tar.gz"
-      sha256 "d45eafc9c0c95004d9e9e7e36a286388112479fca91407948065c7b20a128d99"
+      sha256 "9ffc02ca1aea97d974e5847c1e5488838da2d44392ae73ef70af832d24c85216"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/fidelity/kconnect/releases/download/0.2.1/kconnect_linux_arm64.tar.gz"
-        sha256 "0a2ac1d492ad20697b4efb6d1496f2f3e31037a07b726d14110e4ab22cfe70b5"
+        sha256 "9cbbc7e346d290878d2076befb91cc86f98feda64af77f5443ad919cfc536dea"
       else
         url "https://github.com/fidelity/kconnect/releases/download/0.2.1/kconnect_linux_arm.tar.gz"
-        sha256 "4331b2111f18f8d52dc2de995a663134b1eb161be98db2dedb8d1554ae546fe0"
+        sha256 "0f20f038431aad5ba8324ec6fdafca596ac0e3c3b314a89bb7c28fafbf1e3e00"
       end
     end
   end
