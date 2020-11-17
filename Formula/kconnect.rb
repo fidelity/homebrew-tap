@@ -2,26 +2,24 @@
 class Kconnect < Formula
   desc "The Kubernetes Connection Manager CLI"
   homepage "https://github.com/fidelity/kconnect"
-  version "0.2.1"
+  version "0.3.0-rc.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/fidelity/kconnect/releases/download/0.2.1/kconnect_macos_amd64.tar.gz"
-    sha256 "292bfbcefbebd1fdbcdfdf353c57f7cd64edc74654160f7f3e3568ad7e88f658"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/fidelity/kconnect/releases/download/0.2.1/kconnect_linux_amd64.tar.gz"
-      sha256 "413dcb30f10647e64421da5441b7ccaa824c76903c971a413f5d4837aa5d5a6f"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/fidelity/kconnect/releases/download/0.2.1/kconnect_linux_arm64.tar.gz"
-        sha256 "739f4bf45b209874fad1e20eede7cc2e57185079e3fca4594d6149fb7f53fe8d"
-      else
-        url "https://github.com/fidelity/kconnect/releases/download/0.2.1/kconnect_linux_arm.tar.gz"
-        sha256 "88b98c22ed50e677a2d7218fee889b59d0cb364660b7090b5148efb6731ea9a4"
-      end
-    end
+    url "https://github.com/fidelity/kconnect/releases/download/0.3.0-rc.1/kconnect_macos_amd64.tar.gz"
+    sha256 "416595b79924c4c39061104d60d9eaf50e252ca8663498b95908944117642901"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/fidelity/kconnect/releases/download/0.3.0-rc.1/kconnect_linux_amd64.tar.gz"
+    sha256 "ec5272fe3966ba3611c86f395346cf8c1baf95944207776d18c85807f51ce5df"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/fidelity/kconnect/releases/download/0.3.0-rc.1/kconnect_linux_arm.tar.gz"
+    sha256 "fb865f116bf2761f90635ce4ad63be7e4a7d7a8bb7022802980137f66cd7cae1"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/fidelity/kconnect/releases/download/0.3.0-rc.1/kconnect_linux_arm64.tar.gz"
+    sha256 "f9cdaa4947b2e95f02be06131c1937ae465b31f870ea11e93cf3145610645885"
   end
   
   depends_on "kubernetes-cli"
