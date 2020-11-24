@@ -7,19 +7,19 @@ class Kconnect < Formula
 
   if OS.mac?
     url "https://github.com/fidelity/kconnect/releases/download/0.3.0/kconnect_macos_amd64.tar.gz"
-    sha256 "0ed69b7167dcb7e17e3901d84ed03719af96e71e584b3e912c19f8a9642d7657"
+    sha256 "142be05ba65362d42edf4a0de1d62fb4f2cf99bde2949dadc2cea7a71bc6191c"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/fidelity/kconnect/releases/download/0.3.0/kconnect_linux_amd64.tar.gz"
-    sha256 "06a60f3eaa7ecda20f0bc690be424ee6ea40c2fb172e250ce30a225dae109186"
+    sha256 "d963b093f86f6b9e8aba1466fb70b6c0eb8ffb024582b5abe261c2b0d0c88cf1"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
     url "https://github.com/fidelity/kconnect/releases/download/0.3.0/kconnect_linux_arm.tar.gz"
-    sha256 "f6aee3ed71cced9904df27e4ccef710b0c1d6cf2f135ac501a61ebbd8a9cb8ce"
+    sha256 "d4fc97d30d706e3cbf052f783b20712ef2feb435daa0754c8fb5a393c90860c0"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/fidelity/kconnect/releases/download/0.3.0/kconnect_linux_arm64.tar.gz"
-    sha256 "42e23ee042fc5101b321dfdab6280d8fcfd36dc4b54a67dbff80aecb936653e9"
+    sha256 "c304ddbd079fe5d280ba3face858dd9218a370e6ce262ad26dc1ec9092e2bde9"
   end
   
   depends_on "kubernetes-cli"
