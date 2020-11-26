@@ -2,24 +2,24 @@
 class Kconnect < Formula
   desc "The Kubernetes Connection Manager CLI"
   homepage "https://github.com/fidelity/kconnect"
-  version "0.3.0"
+  version "0.3.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/fidelity/kconnect/releases/download/0.3.0/kconnect_macos_amd64.tar.gz"
-    sha256 "142be05ba65362d42edf4a0de1d62fb4f2cf99bde2949dadc2cea7a71bc6191c"
+    url "https://github.com/fidelity/kconnect/releases/download/0.3.1/kconnect_macos_amd64.tar.gz"
+    sha256 "33f807a024e53a1aa773eaeefdcde7e831917c9594686d26435bdb51bcff3873"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/fidelity/kconnect/releases/download/0.3.0/kconnect_linux_amd64.tar.gz"
-    sha256 "d963b093f86f6b9e8aba1466fb70b6c0eb8ffb024582b5abe261c2b0d0c88cf1"
+    url "https://github.com/fidelity/kconnect/releases/download/0.3.1/kconnect_linux_amd64.tar.gz"
+    sha256 "44feedf7c30c426f7a1b8116d48703ad633b1e7f49abb568825d4d803a38e23c"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/fidelity/kconnect/releases/download/0.3.0/kconnect_linux_arm.tar.gz"
-    sha256 "d4fc97d30d706e3cbf052f783b20712ef2feb435daa0754c8fb5a393c90860c0"
+    url "https://github.com/fidelity/kconnect/releases/download/0.3.1/kconnect_linux_arm.tar.gz"
+    sha256 "e1f1bcfc053a0910d2cbe0d638f5f5c61a36e66617dfe998c0e236adae57b9cc"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/fidelity/kconnect/releases/download/0.3.0/kconnect_linux_arm64.tar.gz"
-    sha256 "c304ddbd079fe5d280ba3face858dd9218a370e6ce262ad26dc1ec9092e2bde9"
+    url "https://github.com/fidelity/kconnect/releases/download/0.3.1/kconnect_linux_arm64.tar.gz"
+    sha256 "a151db4935c7e8406ee66f76f1d9dd4c314084d318b36b2954bd57f4293f1376"
   end
   
   depends_on "kubernetes-cli"
