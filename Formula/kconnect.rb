@@ -5,24 +5,29 @@
 class Kconnect < Formula
   desc "Kubernetes Connection Manager CLI"
   homepage "https://github.com/fidelity/kconnect"
-  version "0.5.2"
+  version "0.5.3"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/fidelity/kconnect/releases/download/0.5.2/kconnect_macos_amd64.tar.gz"
-    sha256 "16ee260b58827f70d6df029d0d1d9e3ed853c9c418cf8904c8b740804ffd97cf"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.3/kconnect_macos_amd64.tar.gz"
+      sha256 "3a63049bb6cfe1baead1925358f615f27fe5c2f23aaffbf0636bc29f0f892c93"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/fidelity/kconnect/releases/download/0.5.2/kconnect_linux_amd64.tar.gz"
-    sha256 "af5678abd19d4df1dc507ce2b793787b03e6cea1148ab50bdc5882c792a92c67"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/fidelity/kconnect/releases/download/0.5.2/kconnect_linux_arm.tar.gz"
-    sha256 "f26c18639b2b89480c3d28aba405621d0ca8f9f40b7c16c843de5fdbd1a87b31"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/fidelity/kconnect/releases/download/0.5.2/kconnect_linux_arm64.tar.gz"
-    sha256 "aa08ae3fcd9cea9fc52fd8592fca4f47a904cfb8a686a04c067c1114ce2c9be6"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.3/kconnect_linux_amd64.tar.gz"
+      sha256 "12d6865b62430d75c10b07ec48262eac1c835ab98b7b469737892a9bdacf51f0"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.3/kconnect_linux_arm.tar.gz"
+      sha256 "c8d4fbcf0a22a5febcd099ba8e8b20ad25d30fafb3b8b75f773c3e382ee89c0a"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.3/kconnect_linux_arm64.tar.gz"
+      sha256 "63dc618b8687e9b9d32d4242f9c7fdfd4441d00df22e47faaf01619c6c40a709"
+    end
   end
 
   depends_on "aws-iam-authenticator"
