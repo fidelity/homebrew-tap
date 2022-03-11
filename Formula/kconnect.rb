@@ -5,20 +5,20 @@
 class Kconnect < Formula
   desc "Kubernetes Connection Manager CLI"
   homepage "https://github.com/fidelity/kconnect"
-  version "0.5.5-rc.1"
+  version "0.5.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fidelity/kconnect/releases/download/0.5.5-rc.1/kconnect_macos_amd64.tar.gz"
-      sha256 "c91a15460dced20f49ea02b79ef5e3a4a6d96c132a7d15b167c5bd2b62bf309a"
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.5/kconnect_macos_amd64.tar.gz"
+      sha256 "146eb87ef20810e2eb776c68364bf02e98498b1bb0b482439506c3bf3dac5218"
 
       def install
         bin.install "kconnect"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fidelity/kconnect/releases/download/0.5.5-rc.1/kconnect_macos_arm64.tar.gz"
-      sha256 "a36e992b187cbd6fef9606529f4008754f6a87516bf1775e7225648616bec8bd"
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.5/kconnect_macos_arm64.tar.gz"
+      sha256 "66ff4f1f2560e68732ea272c016b665fb910887abd16d1135752c7e739e3052f"
 
       def install
         bin.install "kconnect"
@@ -28,16 +28,16 @@ class Kconnect < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fidelity/kconnect/releases/download/0.5.5-rc.1/kconnect_linux_arm64.tar.gz"
-      sha256 "79dd398dc19ed5117681863e75cb5de6bbc825bcf33ef36611717a8e0578b859"
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.5/kconnect_linux_arm64.tar.gz"
+      sha256 "41c1ee4250670bf0041cd68b9ec7695b6c30c20395e72cccd5a75a0132da4491"
 
       def install
         bin.install "kconnect"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fidelity/kconnect/releases/download/0.5.5-rc.1/kconnect_linux_amd64.tar.gz"
-      sha256 "3d3f9474206a51a858c982597693f5fb89361b7cdeff0d9b79a15315e0818285"
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.5/kconnect_linux_amd64.tar.gz"
+      sha256 "7a9e6ec997e753a4654b2266fcc19aba19ee328dc67f5f734fde1b324fcccd1f"
 
       def install
         bin.install "kconnect"
