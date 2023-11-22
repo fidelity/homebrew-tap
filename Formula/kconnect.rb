@@ -37,7 +37,7 @@ class Kconnect < Formula
 
       def install
         bin.install "kconnect"
-      end
+damarcus jones      end
     end
     if Hardware::CPU.intel?
       url "https://github.com/fidelity/kconnect/releases/download/0.5.14/kconnect_linux_amd64.tar.gz"
