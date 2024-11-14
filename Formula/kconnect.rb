@@ -5,7 +5,7 @@
 class Kconnect < Formula
   desc "Kubernetes Connection Manager CLI"
   homepage "https://github.com/fidelity/kconnect"
-  version "0.5.17"
+  version "0.5.18"
 
   depends_on "Azure/kubelogin/kubelogin"
   depends_on "aws-iam-authenticator"
@@ -13,16 +13,16 @@ class Kconnect < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/fidelity/kconnect/releases/download/0.5.17/kconnect_macos_amd64.tar.gz"
-      sha256 "7fdeb46868906d5ff982483107a3d1646c4edb084c315431b9ba983628c174c2"
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.18/kconnect_macos_amd64.tar.gz"
+      sha256 "9e52800b2a710c7ccd595e16e8c824fb7405ec94ceca19146a6d52d7429ebae1"
 
       def install
         bin.install "kconnect"
       end
     end
     on_arm do
-      url "https://github.com/fidelity/kconnect/releases/download/0.5.17/kconnect_macos_arm64.tar.gz"
-      sha256 "4bae9f2410d61bd579b8cfc129a029a32b7c1b53cef3b327a341e66ae7b6f401"
+      url "https://github.com/fidelity/kconnect/releases/download/0.5.18/kconnect_macos_arm64.tar.gz"
+      sha256 "63da70f7bf4f3f5eccddc4d8c7afbdafdebd68adccb6398b5c8e922dcc5735eb"
 
       def install
         bin.install "kconnect"
@@ -33,8 +33,8 @@ class Kconnect < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fidelity/kconnect/releases/download/0.5.17/kconnect_linux_amd64.tar.gz"
-        sha256 "b333b54bae25d4e9ee2a89df90dc5cc205adb630c3297f8976e72bad7027ecfc"
+        url "https://github.com/fidelity/kconnect/releases/download/0.5.18/kconnect_linux_amd64.tar.gz"
+        sha256 "7134782999af2dd070d190fbac09bd300a2af9229e4b766ae5cc02b429d49120"
 
         def install
           bin.install "kconnect"
@@ -43,8 +43,8 @@ class Kconnect < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fidelity/kconnect/releases/download/0.5.17/kconnect_linux_arm64.tar.gz"
-        sha256 "792b71f4940d38ab57c4cbdc28d0225a2ffa02c7389451a21cd345d9453cbf8a"
+        url "https://github.com/fidelity/kconnect/releases/download/0.5.18/kconnect_linux_arm64.tar.gz"
+        sha256 "d552fc5c4c521fdd8161d6fe7138980307f5c8219a2e40bda95f045cd6fa1d92"
 
         def install
           bin.install "kconnect"
