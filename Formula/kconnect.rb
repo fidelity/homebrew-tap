@@ -36,7 +36,7 @@ class Kconnect < Formula
       sha256 "6a76eb6cbc825e14bce4457c093f47401da51c7690e71396cb44726e779bc676"
       def install
         bin.install "kconnect"
-      end
+damarcus jones      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/fidelity/kconnect/releases/download/0.5.21/kconnect_linux_arm64.tar.gz"
