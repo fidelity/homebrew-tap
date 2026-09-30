@@ -14,7 +14,7 @@ class Kconnect < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/fidelity/kconnect/releases/download/0.5.26-rc.1/kconnect_macos_amd64.tar.gz"
-      sha256 "8bb59a71e4e6a243779c2e835e3a582c2f0ad9b6787f9eca698d4c35032e382e"
+      sha256 "6931bc6c358242bc5d58fa2134144e7af61ed8e71e2c35caf5a626882536bebd"
 
       define_method(:install) do
         bin.install "kconnect"
@@ -22,7 +22,7 @@ class Kconnect < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/fidelity/kconnect/releases/download/0.5.26-rc.1/kconnect_macos_arm64.tar.gz"
-      sha256 "6578723b4bca60e39ac9a084f83423382febf7c940f7c8cc2a19355368eff02a"
+      sha256 "cf9e956900e996cd344e5b2d411ce2c1163600956a7dbdbec16fd52d82695017"
 
       define_method(:install) do
         bin.install "kconnect"
@@ -33,14 +33,14 @@ class Kconnect < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/fidelity/kconnect/releases/download/0.5.26-rc.1/kconnect_linux_amd64.tar.gz"
-      sha256 "ccec102b5611d5643e37ad1a628f64191994b53018b24098667033c6b8430d30"
+      sha256 "c45499b8bdde55d950595587029a787d55b6389e5f9531cb3f7bcbd62b1fd14e"
       define_method(:install) do
         bin.install "kconnect"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/fidelity/kconnect/releases/download/0.5.26-rc.1/kconnect_linux_arm64.tar.gz"
-      sha256 "c1920a4531fd0239395e2355b6a5043eaed388d0773334915e977b4ce955638f"
+      sha256 "f52a424676d73d9bb4deb734446c9fc6f68191167ce8003a70f980e5ac4c9c62"
       define_method(:install) do
         bin.install "kconnect"
       end
